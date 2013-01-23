@@ -1,0 +1,10 @@
+*.gem
+.bundle
+vendor/bundle
+.ruby-version
+.rbenv-vars
+spec/reports
+Gemfile.lock
+log/*
+.yardoc
+doc/*

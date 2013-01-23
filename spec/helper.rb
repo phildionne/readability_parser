@@ -1,0 +1,2 @@
+require 'readability'
+require 'rspec'
