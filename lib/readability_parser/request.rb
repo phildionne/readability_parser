@@ -1,6 +1,6 @@
-require 'readability/error'
+require 'readability_parser/error'
 
-module Readability
+module ReadabilityParser
   module Request
 
     # Performs a HTTP Get request
@@ -15,7 +15,7 @@ module Readability
     # @return [Faraday::Response]
     def request(method, path, params={})
 
-      raise Readability::Error::ConfigurationError.new("Please configure Readability.api_token first") if api_token.nil?
+      raise ReadabilityParser::Error::ConfigurationError.new("Please configure ReadabilityParser.api_token first") if api_token.nil?
 
       params.merge!({
         :token => api_token,
@@ -29,7 +29,7 @@ module Readability
           request.url(path, params)
         end
       rescue Faraday::Error::ClientError => error
-        raise Readability::Error::ClientError.new(error)
+        raise ReadabilityParser::Error::ClientError.new(error)
       end
 
       # When using xml format the response is wrapped in a <response> node

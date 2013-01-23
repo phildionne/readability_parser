@@ -1,17 +1,17 @@
-require 'readability/configuration'
-require 'readability/client'
+require 'readability_parser/configuration'
+require 'readability_parser/client'
 
-module Readability
+module ReadabilityParser
   extend Configuration
   class << self
-    # Alias for Readability::Client.new
+    # Alias for ReadabilityParser::Client.new
     #
-    # @return [Readability::Client]
+    # @return [ReadabilityParser::Client]
     def new(options={})
-      Readability::Client.new(options)
+      ReadabilityParser::Client.new(options)
     end
 
-    # Delegate to Readability::Client
+    # Delegate to ReadabilityParser::Client
     def method_missing(method, *args, &block)
       return super unless new.respond_to?(method)
       new.send(method, *args, &block)
@@ -21,4 +21,4 @@ module Readability
       new.respond_to?(method, include_private) || super(method, include_private)
     end
   end
-end # Readability
+end # ReadabilityParser

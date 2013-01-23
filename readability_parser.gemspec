@@ -2,16 +2,16 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'readability/version'
+require 'readability_parser/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "readability"
-  gem.version       = Readability::VERSION
+  gem.name          = "readability_parser"
+  gem.version       = ReadabilityParser::VERSION
   gem.authors       = ["Philippe Dionne"]
   gem.email         = ["dionne.phil@gmail.com"]
   gem.description   = %q{A tiny ruby wrapper for Readability's content parser api}
   gem.summary       = %q{Interact with the article parsing featureset of Readability. This means grabbing an article's content based on a URL.}
-  gem.homepage      = "https://github.com/phildionne/readability"
+  gem.homepage      = "https://github.com/phildionne/readability_parser"
   gem.licenses      = []
 
   gem.files         = `git ls-files`.split($/)

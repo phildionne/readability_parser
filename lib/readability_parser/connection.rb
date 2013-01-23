@@ -1,7 +1,7 @@
 require 'faraday'
 require 'faraday_middleware'
 
-module Readability
+module ReadabilityParser
   module Connection
     # Instantiate a Faraday::Connection
     # @private
@@ -13,7 +13,7 @@ module Readability
     def connection(options={})
 
       options = {
-        :url => Readability.api_endpoint
+        :url => ReadabilityParser.api_endpoint
         }.merge(options)
 
       connection = Faraday.new(options) do |c|
@@ -27,7 +27,7 @@ module Readability
         c.adapter Faraday.default_adapter
       end
 
-      connection.headers[:user_agent] = Readability.user_agent
+      connection.headers[:user_agent] = ReadabilityParser.user_agent
 
       connection
     end

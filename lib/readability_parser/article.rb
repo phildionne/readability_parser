@@ -1,10 +1,10 @@
 require 'ostruct'
 
-module Readability
+module ReadabilityParser
   class Article < OpenStruct
-    # Returns a Readability::Article object
+    # Returns a ReadabilityParser::Article object
     #
-    # @return [Readability::Article]
+    # @return [ReadabilityParser::Article]
     def initialize(article)
       super
     end
