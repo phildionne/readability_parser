@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["dionne.phil@gmail.com"]
   gem.description   = %q{A tiny ruby wrapper for Readability's content parser api}
   gem.summary       = %q{Interact with the article parsing featureset of Readability. This means grabbing an article's content based on a URL.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/phildionne/readability"
   gem.licenses      = []
 
   gem.files         = `git ls-files`.split($/)
