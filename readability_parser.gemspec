@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{A tiny ruby wrapper for Readability's content parser api}
   gem.summary       = %q{Interact with the article parsing featureset of Readability. This means grabbing an article's content based on a URL.}
   gem.homepage      = "https://github.com/phildionne/readability_parser"
-  gem.licenses      = []
+  gem.licenses      = "MIT"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
