@@ -21,6 +21,8 @@ module ReadabilityParser
 
     class ConfigurationError < ReadabilityParser::Error; end
 
+    class RequestError < ReadabilityParser::Error; end
+
     # Raised when ReadabilityParser returns a 400 HTTP status code
     class BadRequest < ReadabilityParser::Error; end
 

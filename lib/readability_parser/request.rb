@@ -29,7 +29,7 @@ module ReadabilityParser
           request.url(path, params)
         end
       rescue Faraday::Error::ClientError => error
-        raise ReadabilityParser::Error::ClientError.new(error)
+        raise ReadabilityParser::Error::RequestError.new(error)
       end
 
       # When using xml format the response is wrapped in a <response> node
