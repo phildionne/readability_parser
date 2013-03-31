@@ -32,6 +32,8 @@ module ReadabilityParser
 
       self.api_token    = DEFAULT_API_TOKEN
       self.format       = DEFAULT_FORMAT
+
+      return true
     end
   end # Configuration
 end
