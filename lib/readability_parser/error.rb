@@ -14,9 +14,11 @@ module ReadabilityParser
         end
       end
 
-      def parse_error(error)
-        JSON.parse(error.response[:body], :symbolize_names => true)
-      end
+      private
+
+        def parse_error(error)
+          JSON.parse(error.response[:body], :symbolize_names => true)
+        end
     end # ClientError
 
     class ConfigurationError < ReadabilityParser::Error; end
