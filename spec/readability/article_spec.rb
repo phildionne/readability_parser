@@ -1,5 +1,4 @@
 require 'helper'
 
-describe Readability::Article do
-  pending
+describe ReadabilityParser::Article do
 end

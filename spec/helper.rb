@@ -1,2 +1,2 @@
-require 'readability'
+require 'readability_parser'
 require 'rspec'

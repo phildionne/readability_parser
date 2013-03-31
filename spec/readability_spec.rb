@@ -1,22 +1,14 @@
 require 'helper'
 
-describe Readability do
+describe ReadabilityParser do
 
   after do
     ReadabilityParser.reset!
   end
 
-  describe ".new" do
-    it "is a Readability::Client" do
-      (Readability.new).should be_a_kind_of(Readability::Client)
+  describe "#new" do
+    it "is a ReadabilityParser::Client" do
+      (ReadabilityParser.new).should be_a_kind_of(ReadabilityParser::Client)
     end
-  end
-
-  describe ".method_missing?" do
-    pending
-  end
-
-  describe ".respond_to?" do
-    pending
   end
 end
