@@ -3,8 +3,13 @@ require 'multi_json'
 module ReadabilityParser
   class Error < StandardError
 
+    # Raised when Readability returns a 4xx or 500 HTTP status code
     class ClientError < Error
 
+      # Creates a new error from an HTTP environement
+      #
+      # @param response [Hash]
+      # @return [ReadabilityParser::Error::ClientError]
       def initialize(error=nil)
         parsed_error = parse_error(error)
         http_error = error.response[:status].to_i
@@ -25,6 +30,7 @@ module ReadabilityParser
 
     class ConfigurationError < ReadabilityParser::Error; end
 
+    # Raised when there's an error in Faraday
     class RequestError < ReadabilityParser::Error; end
 
     # Raised when ReadabilityParser returns a 400 HTTP status code
