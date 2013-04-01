@@ -3,7 +3,7 @@ require 'helper'
 describe Readability do
 
   after do
-    Readability.reset
+    ReadabilityParser.reset!
   end
 
   describe ".new" do

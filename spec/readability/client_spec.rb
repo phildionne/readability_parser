@@ -3,7 +3,7 @@ require 'helper'
 describe Readability::Client do
 
   after do
-    Readability.reset
+    ReadabilityParser.reset!
   end
 
   context "when creating a client" do

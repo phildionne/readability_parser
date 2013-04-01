@@ -14,7 +14,7 @@ module ReadabilityParser
     attr_accessor *VALID_CONFIG_KEYS
 
     def self.extended(base)
-      base.reset
+      base.reset!
     end
 
     # Convenience method to allow configuration options to be set in a block
@@ -26,7 +26,7 @@ module ReadabilityParser
       Hash[ * VALID_CONFIG_KEYS.map { |key| [key, send(key)] }.flatten ]
     end
 
-    def reset
+    def reset!
       self.api_endpoint = DEFAULT_API_ENDPOINT
       self.user_agent   = DEFAULT_USER_AGENT
 
