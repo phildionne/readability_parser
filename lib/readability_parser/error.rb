@@ -1,3 +1,5 @@
+require 'multi_json'
+
 module ReadabilityParser
   class Error < StandardError
 
@@ -17,7 +19,7 @@ module ReadabilityParser
       private
 
         def parse_error(error)
-          JSON.parse(error.response[:body], :symbolize_names => true)
+          MultiJson.load(error.response[:body], :symbolize_keys => true)
         end
     end # ClientError
 

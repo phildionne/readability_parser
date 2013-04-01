@@ -26,6 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "faraday_middleware", "~> 0.9.0"
   gem.add_dependency "hashie", "~> 1.2.0"
   gem.add_dependency "multi_xml", "~> 0.5.2"
+  gem.add_dependency "multi_json", "~> 1.7.2"
 
   gem.add_development_dependency "rspec"
 end
