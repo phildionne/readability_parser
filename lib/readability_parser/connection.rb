@@ -3,6 +3,7 @@ require 'faraday_middleware'
 
 module ReadabilityParser
   module Connection
+
     # Instantiate a Faraday::Connection
     # @private
     private
@@ -10,16 +11,19 @@ module ReadabilityParser
     # Returns a Faraday::Connection object
     #
     # @return [Faraday::Connection]
-    def connection(options={})
-
+    def connection(options = {})
       options = {
         :url => ReadabilityParser.api_endpoint
-        }.merge(options)
+      }.merge(options)
 
       connection = Faraday.new(options) do |c|
-        c.use Faraday::Request::UrlEncoded                  # encode request params as "www-form-urlencoded"
+        # encode request params as "www-form-urlencoded"
+        c.use Faraday::Request::UrlEncoded
+
         c.use FaradayMiddleware::FollowRedirects, limit: 3
-        c.use Faraday::Response::RaiseError                 # raise exceptions on 40x, 50x responses
+
+        # raise exceptions on 40x, 50x responses
+        c.use Faraday::Response::RaiseError
 
         c.response :xml, :content_type => /\bxml$/
         c.response :json, :content_type => /\bjson$/

@@ -8,13 +8,13 @@ module ReadabilityParser
       request(:get, path, params)
     end
 
+
     private
 
     # Returns a Faraday::Response object
     #
     # @return [Faraday::Response]
-    def request(method, path, params={})
-
+    def request(method, path, params = {})
       raise ReadabilityParser::Error::ConfigurationError.new("Please configure ReadabilityParser.api_token first") if api_token.nil?
 
       params.merge!({

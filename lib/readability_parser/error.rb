@@ -10,7 +10,7 @@ module ReadabilityParser
       #
       # @param response [Hash]
       # @return [ReadabilityParser::Error::ClientError]
-      def initialize(error=nil)
+      def initialize(error = nil)
         parsed_error = parse_error(error)
         http_error = error.response[:status].to_i
 
@@ -21,11 +21,12 @@ module ReadabilityParser
         end
       end
 
+
       private
 
-        def parse_error(error)
-          MultiJson.load(error.response[:body], :symbolize_keys => true)
-        end
+      def parse_error(error)
+        MultiJson.load(error.response[:body], :symbolize_keys => true)
+      end
     end # ClientError
 
     class ConfigurationError < ReadabilityParser::Error; end

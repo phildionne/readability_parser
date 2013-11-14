@@ -3,13 +3,13 @@ require 'readability_parser/version'
 module ReadabilityParser
   module Configuration
     VALID_CONNECTION_KEYS = [:api_endpoint, :user_agent].freeze
-    VALID_OPTIONS_KEYS = [:api_token, :format].freeze
-    VALID_CONFIG_KEYS = VALID_CONNECTION_KEYS + VALID_OPTIONS_KEYS
+    VALID_OPTIONS_KEYS    = [:api_token, :format].freeze
+    VALID_CONFIG_KEYS     = VALID_CONNECTION_KEYS + VALID_OPTIONS_KEYS
 
-    DEFAULT_API_ENDPOINT = "https://readability.com/api/content/v1/parser"
-    DEFAULT_USER_AGENT = "ReadabilityParser Ruby Gem #{ReadabilityParser::VERSION}".freeze
-    DEFAULT_API_TOKEN = nil
-    DEFAULT_FORMAT = :json
+    DEFAULT_API_ENDPOINT  = "https://readability.com/api/content/v1/parser"
+    DEFAULT_USER_AGENT    = "ReadabilityParser Ruby Gem #{ReadabilityParser::VERSION}".freeze
+    DEFAULT_API_TOKEN     = nil
+    DEFAULT_FORMAT        = :json
 
     attr_accessor *VALID_CONFIG_KEYS
 

@@ -10,8 +10,8 @@ module ReadabilityParser
       #
       # @param url [String] The URL of an article to return the content for
       # @return [ReadabilityParser::Article]
-      def parse(url, options={})
-        params = {:url => url}
+      def parse(url, options = {})
+        params = { url: url }
         response = get('', params.merge(options))
 
         ReadabilityParser::Article.new(response)
