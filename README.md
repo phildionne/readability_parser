@@ -1,5 +1,5 @@
 # Readability Parser
-A tiny ruby wrapper for Readability's content parser api
+A tiny ruby wrapper for Readability's [Parser API](http://www.readability.com/developers/api/parser)
 
 ## Installation
 Add this line to your application's Gemfile:
