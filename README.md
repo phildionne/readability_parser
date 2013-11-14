@@ -1,6 +1,9 @@
 # Readability Parser
 A tiny ruby wrapper for Readability's [Parser API](http://www.readability.com/developers/api/parser)
 
+[![Gem Version](https://badge.fury.io/rb/readability_parser.png)](http://badge.fury.io/rb/readability_parser)
+[![Code Climate](https://codeclimate.com/github/phildionne/readability_parser.png)](https://codeclimate.com/github/phildionne/readability_parser)
+
 ## Installation
 Add this line to your application's Gemfile:
 
