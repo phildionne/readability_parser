@@ -53,11 +53,11 @@ describe ReadabilityParser::Client do
     before { ReadabilityParser.api_token = '1234' }
 
     it "catches Faraday connection errors" do
-      pending
+      skip
     end
 
     it "catches Readability Parser API errors" do
-      pending
+      skip
     end
   end
 end

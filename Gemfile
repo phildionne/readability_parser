@@ -11,7 +11,7 @@ end
 
 group :test do
   gem 'coveralls', require: false
-  gem 'rspec', '>= 2.14'
+  gem 'rspec', '~> 3.0'
 end
 
 gemspec
