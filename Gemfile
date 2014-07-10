@@ -6,7 +6,7 @@ gem 'yard'
 
 group :development do
   gem 'pry'
-  gem 'debugger'
+  gem 'byebug'
 end
 
 group :test do
