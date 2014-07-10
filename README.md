@@ -27,7 +27,7 @@ or set multiple options with a block:
 
 ```ruby
 ReadabilityParser.configure do |readability|
-  readability.api_token = READABILITY_API_TOKEN,
+  readability.api_token = READABILITY_API_TOKEN
   readability.format = :json
 end
 ```
