@@ -19,8 +19,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.cert_chain  = ['certs/pdionne-gem-public_cert.pem']
-  gem.signing_key = File.expand_path("~/.gem/pdionne-gem-private_key.pem") if $0 =~ /gem\z/
+  gem.cert_chain  = ['certs/gem-public_cert.pem']
+  gem.signing_key = File.expand_path("~/.gem/gem-private_key.pem") if $0 =~ /gem\z/
 
   gem.add_dependency "faraday", "~> 0.9"
   gem.add_dependency "faraday_middleware", "~> 0.9"
