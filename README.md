@@ -5,6 +5,7 @@ A tiny ruby wrapper for Readability's [Parser API](http://www.readability.com/de
 [![Code Climate](https://codeclimate.com/github/phildionne/readability_parser.png)](https://codeclimate.com/github/phildionne/readability_parser)
 [![Dependency Status](https://gemnasium.com/phildionne/readability_parser.png)](https://gemnasium.com/phildionne/readability_parser)
 [![Build Status](https://travis-ci.org/phildionne/readability_parser.png)](https://travis-ci.org/phildionne/readability_parser)
+[![readability_parser API Documentation](https://www.omniref.com/ruby/gems/readability_parser.png)](https://www.omniref.com/ruby/gems/readability_parser)
 
 ## Installation
 Add this line to your application's Gemfile:
